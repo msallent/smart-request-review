@@ -27260,11 +27260,6 @@ async function wait(milliseconds) {
     });
 }
 
-/**
- * The main function for the action.
- *
- * @returns Resolves when the action is complete.
- */
 async function run() {
     try {
         const ms = coreExports.getInput('milliseconds');
@@ -27284,10 +27279,5 @@ async function run() {
     }
 }
 
-/**
- * The entrypoint for the action. This file simply imports and runs the action's
- * main logic.
- */
-/* istanbul ignore next */
 run();
 //# sourceMappingURL=index.js.map
