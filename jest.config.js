@@ -30,9 +30,9 @@ export default {
       'ts-jest',
       {
         tsconfig: 'tsconfig.eslint.json',
-        useESM: true
-      }
-    ]
+        useESM: true,
+      },
+    ],
   },
-  verbose: true
-}
+  verbose: true,
+};
