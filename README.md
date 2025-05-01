@@ -1,9 +1,7 @@
 # Create a GitHub Action Using TypeScript
 
-[![GitHub Super-Linter](https://github.com/actions/typescript-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
-![CI](https://github.com/actions/typescript-action/actions/workflows/ci.yml/badge.svg)
-[![Check dist/](https://github.com/actions/typescript-action/actions/workflows/check-dist.yml/badge.svg)](https://github.com/actions/typescript-action/actions/workflows/check-dist.yml)
-[![CodeQL](https://github.com/actions/typescript-action/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/actions/typescript-action/actions/workflows/codeql-analysis.yml)
+![CI](https://github.com/msallent/smart-request-review/actions/workflows/ci.yml/badge.svg)
+[![CodeQL](https://github.com/msallent/smart-request-review/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/msallent/smart-request-review/actions/workflows/codeql-analysis.yml)
 [![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
 Use this template to bootstrap the creation of a TypeScript action. :rocket:
@@ -24,12 +22,6 @@ follow the below instructions:
 1. Select an owner and name for your new repository
 1. Click **Create repository**
 1. Clone your new repository
-
-> [!IMPORTANT]
->
-> Make sure to remove or update the [`CODEOWNERS`](./CODEOWNERS) file! For
-> details on how to use this file, see
-> [About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
 ## Initial Setup
 
@@ -93,14 +85,14 @@ There are a few things to keep in mind when writing your action code:
   In `main.ts`, you will see that the action is run in an `async` function.
 
   ```javascript
-  import * as core from '@actions/core'
+  import * as core from '@actions/core';
   //...
 
   async function run() {
     try {
       //...
     } catch (error) {
-      core.setFailed(error.message)
+      core.setFailed(error.message);
     }
   }
   ```
@@ -259,48 +251,3 @@ following steps:
    commits, tags and branches to the remote repository. From here, you will need
    to create a new release in GitHub so users can easily reference the new tags
    in their workflows.
-
-## Dependency License Management
-
-This template includes a GitHub Actions workflow,
-[`licensed.yml`](./.github/workflows/licensed.yml), that uses
-[Licensed](https://github.com/licensee/licensed) to check for dependencies with
-missing or non-compliant licenses. This workflow is initially disabled. To
-enable the workflow, follow the below steps.
-
-1. Open [`licensed.yml`](./.github/workflows/licensed.yml)
-1. Uncomment the following lines:
-
-   ```yaml
-   # pull_request:
-   #   branches:
-   #     - main
-   # push:
-   #   branches:
-   #     - main
-   ```
-
-1. Save and commit the changes
-
-Once complete, this workflow will run any time a pull request is created or
-changes pushed directly to `main`. If the workflow detects any dependencies with
-missing or non-compliant licenses, it will fail the workflow and provide details
-on the issue(s) found.
-
-### Updating Licenses
-
-Whenever you install or update dependencies, you can use the Licensed CLI to
-update the licenses database. To install Licensed, see the project's
-[Readme](https://github.com/licensee/licensed?tab=readme-ov-file#installation).
-
-To update the cached licenses, run the following command:
-
-```bash
-licensed cache
-```
-
-To check the status of cached licenses, run the following command:
-
-```bash
-licensed status
-```

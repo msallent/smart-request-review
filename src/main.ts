@@ -1,11 +1,6 @@
 import * as core from '@actions/core'
 import { wait } from './wait.js'
 
-/**
- * The main function for the action.
- *
- * @returns Resolves when the action is complete.
- */
 export async function run(): Promise<void> {
   try {
     const ms: string = core.getInput('milliseconds')
