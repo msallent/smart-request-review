@@ -11,6 +11,7 @@
     "__tests__",
     "src",
     "eslint.config.mjs",
+    "lint-staged.config.mjs",
     "jest.config.js",
     "rollup.config.ts"
   ]
