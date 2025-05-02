@@ -1,7 +1,8 @@
 # Create a GitHub Action Using TypeScript
 
 ![CI](https://github.com/msallent/smart-request-review/actions/workflows/ci.yml/badge.svg)
-[![CodeQL](https://github.com/msallent/smart-request-review/actions/workflows/codeql.yml/badge.svg)](https://github.com/msallent/smart-request-review/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/msallent/smart-request-review/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/msallent/smart-request-review/actions/workflows/codeql-analysis.yml)
+[![Check dist/](https://github.com/msallent/smart-request-review/actions/workflows/check-dist.yml/badge.svg)](https://github.com/msallent/smart-request-review/actions/workflows/check-dist.yml)
 [![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
 Use this template to bootstrap the creation of a TypeScript action. :rocket:
